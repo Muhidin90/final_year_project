@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\sendController;
 use Illuminate\Support\Facades\Route;
-
+// use App\Http\Controllers\sendController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/send', [sendController::class, 'send']);
